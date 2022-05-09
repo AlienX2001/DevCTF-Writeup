@@ -1,3 +1,11 @@
+## GetArgs
+
+Using ghidra on the binary and getting the QM9Nq function we see that this functions is returning 3 everytime
+
+![image](https://user-images.githubusercontent.com/64488123/167406272-7e915208-7f75-4c83-862b-f5dac47286c9.png)
+
+Hence we can simply subtract 3 from "AJi9VL0C4p" and get ">Gf6SI-@1m"
+
 ## Excess Chars
 
 Using ghidra on the binary
