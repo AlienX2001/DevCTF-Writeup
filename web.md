@@ -30,6 +30,22 @@ Now lets let the traffic play on repeater
 
 ![image](https://user-images.githubusercontent.com/64488123/167373244-2441e958-1f30-4715-8616-eaae3aef04ed.png)
 
+### Unintended of the above
+
+when we catted the app.py we got the following 
+
+![image](https://user-images.githubusercontent.com/64488123/167380736-dac8d055-b150-466f-a551-803f14e632ac.png)
+
+Here we see an echo which has an endpoint /echo which is some kinda API which echo's stuff. lets try it
+
+![image](https://user-images.githubusercontent.com/64488123/167380955-26804693-f116-4a12-9e89-793b458b67a0.png)
+
+Trying the SSTI payload in here
+
+![image](https://user-images.githubusercontent.com/64488123/167381119-6d74c966-5f89-4958-a857-c44edecf9728.png)
+
+We might have gotten SSTI through here too
+
 We see there is a message that the password has been reset for foobar1. Ok, in the post request we see the USER_ID and the new PASSWORD, lets do 1 thing and lets try changing the USER_ID to foobar2
 
 ![image](https://user-images.githubusercontent.com/64488123/167373523-9bf797f1-5cf7-42d7-bb6a-a0dd844f989d.png)
@@ -97,3 +113,10 @@ We see a FLAG_DIR and catting all files in them we get the flag
 
 ![image](https://user-images.githubusercontent.com/64488123/167380437-04d1433d-e867-490e-a6ca-6e3b0d07d9f5.png)
 
+### uninteded for the above
+
+There was an unintended to /echo path 
+
+![image](https://user-images.githubusercontent.com/64488123/167381374-b9ccb6ea-7678-44d0-8bf5-aa04f792374d.png)
+
+This was found by catting the source code of the app.py using the 1st SSTI 
